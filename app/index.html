@@ -14,7 +14,7 @@
                 <div class="input-group form-group">
                     <input type="tel" class="form-control" placeholder="Numéro de téléphone" id="phonenumber" ng-model="phoneNumber" autofocus ng-disabled="callProcessing" ng-change="checkNumber()">
                     <span class="input-group-btn">
-                        <button class="btn btn-success" ng-class="callProcessing ? 'active' : ''"  ng-disabled="callProcessing || !phoneNumber" type="submit"><i ng-class="callProcessing ? 'fa fa-spinner fa-pulse' : 'fa fa-volume-control-phone'"></i></button>
+                        <button class="btn btn-success" ng-class="callProcessing ? 'active' : ''"  ng-disabled="callProcessing || !phoneNumber" type="submit"><i ng-class="callProcessing ? 'fa fa-spinner fa-pulse' : 'fa fa-phone fa-phone fa-rotate-180'"></i></button>
                     </span>
                 </div>
             </form>
@@ -26,12 +26,15 @@
 
                         <li ng-class="{'active': activeItem === 'devices'}" tooltip-placement="right" uib-tooltip="Téléphones"><a href="#/devices/"><i class="fa fa-phone"></i></a></li>
                         <li ng-class="{'active': activeItem === 'contacts'}" tooltip-placement="right" uib-tooltip="Contacts"><a href="#/contacts/"><i class="fa fa-users"></i></a></li>
+                        <li ng-class="{'active': activeItem === 'channels'}" tooltip-placement="right" uib-tooltip="Appels en cours (beta)"><a href="#/channels/"><i class="fa fa-volume-control-phone"></i></a></li>
+
                     </ul>
 
                     <ul class="nav nav-sidebar nav-sidebar-bottom">
                         <li><a ng-click="open('https://client.voxity.fr/')"><small>client</small></a></li>
                         <li><a ng-click="open('https://octopus.voxity.fr/')"><small>octopus</small></a></li>
                         <li ng-class="{'active': activeItem === 'settings'}" tooltip-placement="right" uib-tooltip="Paramètres"><a href="#/settings/"><i class="fa fa-cog"></i></a></li>
+
                     </ul>
                 </div>
                 <!-- /sidebar -->
